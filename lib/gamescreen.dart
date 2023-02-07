@@ -147,28 +147,41 @@ class _GameScreenState extends State<GameScreen> {
     // --------------------------------- BUILD THE UI ---------------------------------
     return Scaffold(
       backgroundColor: Colors.black,
+      // AppBar section
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
         title: Text(
           "Hangman",
+          // create retroStyle reference in utils.dart
+          // import 'package:hangman/utils.dart';
           style: retroStyle(30, Colors.white, FontWeight.w700),
         ),
       ),
+      // Body section
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
+        // 2 properties in FLutter: chil vs. children
+        // child takes a single widget
+        // children takes a list of widgets
+        // Container - a convenience widget that combines common painting, positioning, and sizing widgets
         child: Container(
           alignment: Alignment.center,
+          // Column - A widget that displays its children in a vertical array.
           child: Column(
             children: [
               Container(
                 margin: EdgeInsets.only(top: 20),
                 alignment: Alignment.center,
+                // adjust the width
                 width: MediaQuery.of(context).size.width / 3.5,
+                // adjust the color
                 decoration: BoxDecoration(color: Colors.lightBlueAccent),
                 height: 30,
+                // Center - a widget that centers its child within itself.
                 child: Center(
                   child: Text(
+                    // "0 points",
                     "$points points",
                     style: retroStyle(15, Colors.black, FontWeight.w700),
                   ),
@@ -198,6 +211,7 @@ class _GameScreenState extends State<GameScreen> {
                 height: 30,
               ),
               Text(
+                // "??????"
                 handleText(),
                 style: retroStyle(35, Colors.white, FontWeight.w700),
                 textAlign: TextAlign.center,
@@ -206,13 +220,16 @@ class _GameScreenState extends State<GameScreen> {
                 height: 30,
               ),
               GridView.count(
+                // Creates grid layouts with a fixed number of tiles in the cross axis
                 crossAxisCount: 7,
                 shrinkWrap: true,
+                // creates scrool physics that doesn't let the user scroll
                 physics: NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.only(left: 10, right: 10),
                 childAspectRatio: 1.3,
                 // iterate through all english characters
                 children: letters.map((alphabet) {
+                  // A rectangular area of a Material that responds to touch
                   return InkWell(
                     onTap: () => checkLetter(alphabet),
                     child: Center(
