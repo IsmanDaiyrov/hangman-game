@@ -1,6 +1,11 @@
-# hangman
+# Hangman Game Project
 
 A new Flutter project.
+
+## Preview
+<img width="478" alt="Screenshot 2023-02-26 at 2 57 16 PM" src="https://user-images.githubusercontent.com/65091188/221436952-1838d8bf-1f7d-4172-9c19-a456ed44b669.png">
+<img width="478" alt="Screenshot 2023-02-26 at 2 56 44 PM" src="https://user-images.githubusercontent.com/65091188/221436960-162c7479-55f5-4ace-8865-c19192924732.png">
+<img width="478" alt="Screenshot 2023-02-26 at 2 56 22 PM" src="https://user-images.githubusercontent.com/65091188/221436965-ad52f400-9883-4dc1-bdef-0b02a4cb4cc3.png">
 
 ## Getting Started
 
